@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatile" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com dom</title>
+    <style>
+        body {
+            background: rgba(99, 99, 146, 0.801);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>iniciando estudos com o dom</h1>
+    <p>Aqui vai o resultado</p>
+    <p>aprendendo a usar DOM <strong>em JS</strong></p>
+    <div id="msg">Clique em mim</div>
+    <div id="zap">whatsapp</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+        var z = window.document.querySelector('div#zap')
+        z.style.background = 'yellow'
+    </script>
+</body>
+</html
