@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de paises</title>
+</head>
+<body>
+    <h1>Descubra seu país</h1>
+    <input type="text" name="txtc" id="txtc">
+    <input type="button" value="Descubra" onclick="descobrir()">
+    <div id="res"></div>
+    <script>
+        function descobrir() {
+            var txtc = document.querySelector('input#txtc')
+            var res = document.querySelector('div#res')
+            var pais = String(txtc.value) 
+            if (pais == 'EUA') {
+                res.innerHTML += `seu país de origem é ${pais}`
+            } else {
+                (pais == 'brasil')
+                res.innerHTML += 'seu país de origem é brasil'
+            }
+            
+        }
+        
+
+    </script>
+</body>
+</html>
