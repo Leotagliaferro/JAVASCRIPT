@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+    <h1>Urna</h1>
+    <input type="number" name="num1" id="num1">
+    <input type="button" value="descobrir" onclick ="descobrir()">
+    <div id="res"></div>
+    
+    <script>
+        function descobrir(){
+            var num1 = document.getElementById('num1')
+            var res = document.getElementById('res')
+            var idade = Number(num1.value)
+            if (idade < 16) {
+                res.innerHTML = `sua idade é de ${idade} anos você não vota`
+            } else if (idade < 18 || idade > 65) {
+                res.innerHTML = `sua idade é de ${idade} voto opcional` 
+            } else {
+                res.innerHTML = `sua idade é de ${idade} voto obrigatorio`
+            }
+        }
+    </script>
+</body>
+</html>
