@@ -6,12 +6,29 @@ const data = [
     {name: "matheus", age: 33, salary: 2500, active: true, team:"frontend", bonus: 0}
 ]
 
-const users = data.map((user) => {
-    if (user.salary <3000) {
-        return user.salary + 500
+const users = data.map((user)=> {
+    let bonus = user.bonus
+
+    if (user.team === "frontend") {
+        bonus = 300
+         }
+    if(user.team ==="backend") {
+        bonus = 500
+    }  
+    if(user.team ==="devops") {
+        bonus = 1000
+    }
+    if(user.team ==="mobile") {
+        bonus = 200
+    }
+   
+   return {
+    name: user.name,
+    bonus: bonus,
+    team: user.team
     }
 })
 
 console.log(users)
-console.log(data)
+
 

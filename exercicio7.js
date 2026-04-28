@@ -6,12 +6,16 @@ const data = [
     {name: "matheus", age: 33, salary: 2500, active: true, team:"frontend", bonus: 0}
 ]
 
-const users = data.map((user) => {
-    if (user.salary <3000) {
-        return user.salary + 500
-    }
-})
+
+const users = data.filter((user)=> { 
+    return user.team === "frontend" 
+  })
+   
+  const salario = users.reduce((total, user)=> {
+        return total + user.salary
+  }, 0)
 
 console.log(users)
-console.log(data)
+console.log(salario)
+
 
