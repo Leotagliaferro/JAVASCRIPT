@@ -23,3 +23,19 @@ function renderizarClientes () {
     }
 
 }
+
+
+function pesquisaCliente() {
+    let pesquisar = document.getElementById('pesquisa').value
+    let listarClientes = document.getElementById('lista-clientes')
+    listarClientes.innerHTML = ""
+    for(let i = 0; i < clientes.length; i++) {
+      if (pesquisar == clientes[i]) {
+        listarClientes.innerHTML +="<li>" + clientes[i] + "</li>"
+      }
+    }
+
+
+    
+ 
+}
